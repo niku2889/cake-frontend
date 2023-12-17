@@ -4,9 +4,20 @@
     <div class="collection-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 rtl-text">
+                <div col-12>
                     <p class="ctitle mb-0">Celebration Cake</p>
                     <hr class="mt-0">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="product-right-slick " [class.imgSticky]="!mobile">
+                        <img [hidden]="!isHeartShape" class="w-100 "
+                            [src]="sanitizer.bypassSecurityTrustResourceUrl(dataURI)">
+                        <img [hidden]="isHeartShape" class="w-100"
+                            [src]="sanitizer.bypassSecurityTrustResourceUrl(dataURI1)">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 rtl-text">
+                   
                     <div class="product-right">
                         <h6 class="product-title size-text">Shape</h6>
                         <div>
@@ -494,15 +505,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-10 col-xs-12">
-                    <div class="product-right-slick imgSticky">
-                        <img [hidden]="!isHeartShape" class="w-100 "
-                            [src]="sanitizer.bypassSecurityTrustResourceUrl(dataURI)">
-                        <img [hidden]="isHeartShape" class="w-100"
-                            [src]="sanitizer.bypassSecurityTrustResourceUrl(dataURI1)">
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -640,7 +642,8 @@
                     </td>
                     <td>
                         <h4 class="mb-0">
-                            <a class="maincolor text-decoration-none" href="https://www.cherans.com/product/cherans-celebration-cake/">Celebration Cake</a>
+                            <a class="maincolor text-decoration-none"
+                                href="https://www.cherans.com/product/cherans-celebration-cake/">Celebration Cake</a>
                         </h4>
                         <div>
                             <p class="mb-0">Shape : {{item.shape}}</p>

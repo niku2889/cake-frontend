@@ -7090,6 +7090,7 @@ export class ProductDetailsComponent {
         }
         this.dataURI = 'data:image/svg+xml;charset=utf8, ' + encodeURIComponent(this.createHeartSvg('', ''));
         this.dataURI1 = 'data:image/svg+xml;charset=utf8, ' + encodeURIComponent(this.createRoundSvg('', ''));
+        this.scrollTop();
     }
 
     changeMainColor(e: any) {
@@ -7110,6 +7111,7 @@ export class ProductDetailsComponent {
         }
         this.mainIcingColor = e.hexcode;
         this.selectedMainIcingColor = e.name;
+        this.scrollTop();
     }
 
     changeTopColor(e: any) {
@@ -7129,6 +7131,7 @@ export class ProductDetailsComponent {
         }
         this.topPipingColor = e.hexcode;
         this.selectedTopPipingColor = e.name;
+        this.scrollTop();
     }
 
     changeBottomColor(e: any) {
@@ -7149,6 +7152,15 @@ export class ProductDetailsComponent {
         }
         this.bottomPipingColor = e.hexcode;
         this.selectedBottomPipingColor = e.name;
+        this.scrollTop();
+    }
+
+    scrollTop() {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
 
     selectShape(type: string) {
@@ -7189,11 +7201,11 @@ export class ProductDetailsComponent {
         this.selectedCustomText = event.target.value;
         if (this.selectedCustomText == '3') {
             if (this.customTextSelected == false)
-                this.finalPrice = this.finalPrice + 12;
+                this.finalPrice = this.finalPrice + (12 * this.quantity);
             this.customTextSelected = true;
         } else {
             if (this.customTextSelected == true)
-                this.finalPrice = this.finalPrice - 12;
+                this.finalPrice = this.finalPrice - (12 * this.quantity);
             this.customTextSelected = false;
         }
         this.points = Math.round(this.finalPrice);
@@ -7209,7 +7221,12 @@ export class ProductDetailsComponent {
 
     qtyPlus() {
         this.quantity = this.quantity + 1;
-        this.finalPrice = this.price * this.quantity;
+        let cPrice = 0;
+        if (this.customTextSelected) cPrice = 12 * 1;
+        let ex1 = this.noChocolateMacarons * 1;
+        let ex2 = this.noExtraTallCandle * 1;
+        let ex3 = this.noWaferButterflies * 1;
+        this.finalPrice = (this.price + cPrice + ex1 + ex2 + ex3) * this.quantity;
         this.points = Math.round(this.finalPrice);
         this.totalPrice = this.cartItems.reduce((partialSum, a) => partialSum + a.finalPrice, 0);
     }
@@ -7218,14 +7235,19 @@ export class ProductDetailsComponent {
         if (this.quantity != 0 && this.quantity != 1) {
             this.quantity = this.quantity - 1;
         }
-        this.finalPrice = this.price * this.quantity;
+        let cPrice = 0;
+        if (this.customTextSelected) cPrice = 12 * 1;
+        let ex1 = this.noChocolateMacarons * 1
+        let ex2 = this.noExtraTallCandle * 1;
+        let ex3 = this.noWaferButterflies * 1;
+        this.finalPrice = (this.price + cPrice + ex1 + ex2 + ex3) * this.quantity;
         this.points = Math.round(this.finalPrice);
         this.totalPrice = this.cartItems.reduce((partialSum, a) => partialSum + a.finalPrice, 0);
     }
 
     cmPlus() {
         this.noChocolateMacarons = this.noChocolateMacarons + 1;
-        this.finalPrice = this.finalPrice + 1;
+        this.finalPrice = this.finalPrice + (1 * this.quantity);
         this.points = Math.round(this.finalPrice);
     }
 
@@ -7233,13 +7255,13 @@ export class ProductDetailsComponent {
         if (this.noChocolateMacarons != 0) {
             this.noChocolateMacarons = this.noChocolateMacarons - 1;
         }
-        this.finalPrice = this.finalPrice - 1;
+        this.finalPrice = this.finalPrice - (1 * this.quantity);
         this.points = Math.round(this.finalPrice);
     }
 
     wbPlus() {
         this.noWaferButterflies = this.noWaferButterflies + 1;
-        this.finalPrice = this.finalPrice + 1;
+        this.finalPrice = this.finalPrice + (1 * this.quantity);
         this.points = Math.round(this.finalPrice);
     }
 
@@ -7247,13 +7269,13 @@ export class ProductDetailsComponent {
         if (this.noWaferButterflies != 0) {
             this.noWaferButterflies = this.noWaferButterflies - 1;
         }
-        this.finalPrice = this.finalPrice - 1;
+        this.finalPrice = this.finalPrice - (1 * this.quantity);
         this.points = Math.round(this.finalPrice);
     }
 
     tcPlus() {
         this.noExtraTallCandle = this.noExtraTallCandle + 1;
-        this.finalPrice = this.finalPrice + 1;
+        this.finalPrice = this.finalPrice + (1 * this.quantity);
         this.points = Math.round(this.finalPrice);
     }
 
@@ -7261,7 +7283,7 @@ export class ProductDetailsComponent {
         if (this.noExtraTallCandle != 0) {
             this.noExtraTallCandle = this.noExtraTallCandle - 1;
         }
-        this.finalPrice = this.finalPrice - 1;
+        this.finalPrice = this.finalPrice - (1 * this.quantity);
         this.points = Math.round(this.finalPrice);
     }
 
