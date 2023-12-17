@@ -5,8 +5,6 @@
 
 export const environment = {
     production: false,
-    //apiUrl: "https://us-central1-idva-portal-dev.cloudfunctions.net/nmlApi/",
-    //apiUrl: "http://localhost:5001/idva-portal-dev/us-central1/nmlApi/",
     //apiUrl: "http://localhost:5001/boxing-frontend/us-central1/",
     apiUrl: "https://us-central1-boxing-frontend.cloudfunctions.net/"
 };

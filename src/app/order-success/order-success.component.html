@@ -1,14 +1,14 @@
 <app-header></app-header>
 <div class="container mt-5 mb-5">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12 col-sm-12">
             <div class="card">
-                <div class="text-left logo p-2 px-5"> <img
-                        src="https://www.cherans.com/wp-content/uploads/2022/04/logo.png" width="50"> </div>
-                <div class="invoice p-5 bg-light">
-                    <h5>Your order Confirmed!</h5> <span class="font-weight-bold d-block mt-4">Hello,
-                        {{orderData?.customer_details?.name}}</span>
-                    <span>You order has been confirmed and will be shipped once it is ready!</span>
+                <div class="text-left logo p-3"> <img
+                        src="https://www.cherans.com/wp-content/uploads/2022/04/logo.png" width="100"> </div>
+                <div class="invoice p-3 bg-light">
+                    <h4 class="font-weight-bold d-block mt-4">Hello,
+                        {{orderData?.customer_details?.name}}</h4>
+                    <span>You order has been confirmed!</span>
                     <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
                         <table class="table table-borderless">
                             <tbody>
@@ -21,33 +21,47 @@
                                     </td>
                                     <td>
                                         <div class="py-2"> <span class="d-block text-muted">Order No</span>
-                                            <span>{{orderData?.orderNo}}</span>
+                                            <span>#{{orderData?.orderNo}}</span>
                                         </div>
                                     </td>
+                                    <td>
+                                        <div class="py-2"> <span class="d-block text-muted">Billing Address</span>
+                                            <span
+                                                *ngIf="orderData?.customer_details?.address?.line1">{{orderData?.customer_details?.address?.line1}},
+                                            </span>
+                                            <span
+                                                *ngIf="orderData?.customer_details?.address?.line2">{{orderData?.customer_details?.address?.line2}},
+                                            </span>
+                                            <span
+                                                *ngIf="orderData?.customer_details?.address?.city">{{orderData?.customer_details?.address?.city}},
+                                            </span>
+                                            <span
+                                                *ngIf="orderData?.customer_details?.address?.state">{{orderData?.customer_details?.address?.state}},
+                                            </span>
+                                            <span
+                                                *ngIf="orderData?.customer_details?.address?.country">{{orderData?.customer_details?.address?.country}},
+                                            </span>
+                                            <span
+                                                *ngIf="orderData?.customer_details?.address?.postal_code">{{orderData?.customer_details?.address?.postal_code}}</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td>
                                         <div class="py-2"> <span class="d-block text-muted">Payment</span> <span>
                                                 {{orderData?.payment_method_types[0]}}
                                             </span> </div>
                                     </td>
                                     <td>
-                                        <div class="py-2"> <span class="d-block text-muted">Shiping Address</span>
-                                            <span
-                                                *ngIf="orderData?.shipping_details?.address?.line1">{{orderData?.shipping_details?.address?.line1}},
+                                        <div class="py-2"> <span class="d-block text-muted">Pickup Date</span>
+                                            <span>{{getPickupDate(orderData?.custom_fields[0])}}
                                             </span>
-                                            <span
-                                                *ngIf="orderData?.shipping_details?.address?.line2">{{orderData?.shipping_details?.address?.line2}},
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="py-2"> <span class="d-block text-muted">Pickup Time</span>
+                                            <span>{{getPickupDate(orderData?.custom_fields[1])}}
                                             </span>
-                                            <span
-                                                *ngIf="orderData?.shipping_details?.address?.city">{{orderData?.shipping_details?.address?.city}},
-                                            </span>
-                                            <span
-                                                *ngIf="orderData?.shipping_details?.address?.state">{{orderData?.shipping_details?.address?.state}},
-                                            </span>
-                                            <span
-                                                *ngIf="orderData?.shipping_details?.address?.country">{{orderData?.shipping_details?.address?.country}},
-                                            </span>
-                                            <span
-                                                *ngIf="orderData?.shipping_details?.address?.postal_code">{{orderData?.shipping_details?.address?.postal_code}}</span>
                                         </div>
                                     </td>
                                 </tr>
@@ -134,15 +148,6 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <div class="text-left"> <span class="text-muted">Shipping Fee</span> </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-right"> <span>{{orderData?.total_details?.amount_shipping |
-                                                    currency:'GBP'}}</span> </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
                                             <div class="text-left"> <span class="text-muted">Tax Fee</span> </div>
                                         </td>
                                         <td>
@@ -178,7 +183,7 @@
                             </table>
                         </div>
                     </div>
-                    <p>We will be sending shipping confirmation email when the item shipped successfully!</p>
+                    <!-- <p>We will be sending shipping confirmation email when the item shipped successfully!</p> -->
                     <p class="font-weight-bold mb-0">Thanks for shopping with us!</p> <span>Cherans Bakery</span>
                 </div>
                 <div class="d-flex justify-content-between footer p-3"> <span>Need Help? <a

@@ -98,6 +98,7 @@ export class ProductDetailsComponent {
     dataURI1: any;
     divData: string = '';
     divData1: string = '';
+    isPromo: boolean = false;
 
     createHeartSvg = (color = '#c8a7a3', defaultColor = '#c8a7a3') => `
     <svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 1500 1500" height="500" version="1.0">

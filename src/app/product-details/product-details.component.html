@@ -1,23 +1,14 @@
 <app-header></app-header>
 <!-- section start -->
-<section class="p-0">
+<section class="p-0 mt-4">
     <div class="collection-wrapper">
-        <div class="container-lg">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6 rtl-text">
                     <p class="ctitle mb-0">Celebration Cake</p>
                     <hr class="mt-0">
                     <div class="product-right">
-                        <!-- <h2>Women Pink Shirt</h2>
-                        <h4><del>$459.00</del><span>55% off</span></h4>
-                        <h3>$32.96</h3>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul> -->
                         <h6 class="product-title size-text">Shape</h6>
-
                         <div>
                             <ul class="shapetype">
                                 <li><a (click)="selectShape('heart')">
@@ -372,7 +363,7 @@
                                 </ul>
                             </div>
                             <div class="row mt-3">
-                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <h6 class="product-title size-text">Extra Tall Candle (+£1.00)</h6>
                                     <div class="input-group">
                                         <input (click)="tcMinus()" type="button" value="-" class="button-minus"
@@ -384,7 +375,7 @@
                                             data-field="quantity">
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <h6 class="product-title size-text">Wafer Butterflies (+£1.00)</h6>
                                     <div class="input-group">
                                         <input (click)="wbMinus()" type="button" value="-" class="button-minus"
@@ -396,7 +387,7 @@
                                             data-field="quantity">
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
                                     <h6 class="product-title size-text">Chocolate Macarons (+£1.00)</h6>
                                     <div class="input-group">
                                         <input (click)="cmMinus()" type="button" value="-" class="button-minus"
@@ -455,16 +446,8 @@
                                     <textarea [(ngModel)]="bakerNote" type="text" class=" form-control"></textarea>
                                 </div>
                             </div>
-                            <!-- <div class="size-box">
-                                <ul>
-                                    <li class="active"><a href="#">s</a></li>
-                                    <li><a href="#">m</a></li>
-                                    <li><a href="#">l</a></li>
-                                    <li><a href="#">xl</a></li>
-                                </ul>
-                            </div> -->
                             <h3 class="mt-4">Order total: {{finalPrice | currency:currency}}</h3>
-                            <h6>Purchase this product now and earn {{points}} Points!</h6>
+                            <!-- <h6>Purchase this product now and earn {{points}} Points!</h6> -->
 
                             <div class="qty-box">
                                 <h6 class="product-title me-5">Celebration Cake quantity</h6>
@@ -492,79 +475,31 @@
                             <h6 class="product-title">share it</h6>
                             <div class="product-icon">
                                 <ul class="product-social">
-                                    <li><i class="bi bi-facebook"></i></li>
-                                    <li><i class="bi bi-instagram"></i></li>
-                                    <li><i class="bi bi-linkedin"></i></li>
+                                    <li>
+                                        <a class="nav-link" href="https://www.facebook.com/CheransBakery"
+                                            target="_blank">
+                                            <i class="bi bi-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link" href="https://www.instagram.com/CheransBakery/%20"
+                                            target="_blank">
+                                            <i class="bi bi-instagram"></i> </a>
+                                    </li>
+                                    <li> <a class="nav-link" href="https://www.tiktok.com/@CheransBakery%20"
+                                            target="_blank">
+                                            <i class="bi bi-tiktok"></i> </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- 
-                        <div class="border-product">
-                            <h6 class="product-title">product details</h6>
-                            <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium
-                                doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore
-                                veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam
-                                voluptatem,</p>
-                        </div>
-                        <div class="border-product">
-                            <h6 class="product-title">share it</h6>
-                            <div class="product-icon">
-                                <ul class="product-social">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                                </ul>
-                                <form class="d-inline-block">
-                                    <button class="wishlist-btn"><i class="fa fa-heart"></i><span class="title-font">Add
-                                            To WishList</span></button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="border-product">
-                            <h6 class="product-title">Time Reminder</h6>
-                            <div class="timer">
-                                <p id="demo"><span>25 <span class="padding-l">:</span> <span
-                                            class="timer-cal">Days</span> </span><span>22 <span
-                                            class="padding-l">:</span> <span class="timer-cal">Hrs</span>
-                                    </span><span>13 <span class="padding-l">:</span> <span class="timer-cal">Min</span>
-                                    </span><span>57 <span class="timer-cal">Sec</span></span>
-                                </p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-10 col-xs-12">
-                    <div class="product-right-slick">
+                    <div class="product-right-slick imgSticky">
                         <img [hidden]="!isHeartShape" class="w-100 "
                             [src]="sanitizer.bypassSecurityTrustResourceUrl(dataURI)">
                         <img [hidden]="isHeartShape" class="w-100"
                             [src]="sanitizer.bypassSecurityTrustResourceUrl(dataURI1)">
-
-                        <!-- <div *ngIf="mobile">
-                            <img *ngIf="isHeartShape" class="w-100 " src="../../assets/cake/heartcake.png">
-                            <img *ngIf="!isHeartShape" class="w-100" src="../../assets/cake/round.png">
-                        </div> -->
-                        <!-- <div [hidden]="isHeartShape">
-                            
-                            <app-circle-svg [topPipingColor]="topPipingColor" [bottomPipingColor]="bottomPipingColor"
-                                [mainIcingColor]="mainIcingColor"></app-circle-svg>
-                        </div>
-                        <div [hidden]="!isHeartShape">
-                            <app-heart-svg [topPipingColor]="topPipingColor" [bottomPipingColor]="bottomPipingColor"
-                                [mainIcingColor]="mainIcingColor"></app-heart-svg>
-                        </div> -->
-                        <!-- <div [hidden]="isHeartShape" *ngIf="!mobile" class="">
-                            <app-circle-svg *ngIf="!isHeartShape" [topPipingColor]="topPipingColor"
-                                [bottomPipingColor]="bottomPipingColor"
-                                [mainIcingColor]="mainIcingColor"></app-circle-svg>
-                            <app-heart-svg *ngIf="isHeartShape" [topPipingColor]="topPipingColor"
-                                [bottomPipingColor]="bottomPipingColor"
-                                [mainIcingColor]="mainIcingColor"></app-heart-svg>
-                        </div> -->
-                        <!-- <div><img src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                alt="" class="img-fluid blur-up lazyload image_zoom_cls-0"></div> -->
                     </div>
                 </div>
 
@@ -576,7 +511,7 @@
 
 <!-- product-tab starts -->
 <section class="tab-product m-0">
-    <div class="container-lg">
+    <div class="container">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
@@ -686,248 +621,11 @@
 <!-- product-tab ends -->
 <app-footer></app-footer>
 
-<!-- product section start -->
-<!-- <section class="section-b-space ratio_asos">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 product-related">
-                <h2>related products</h2>
-            </div>
-        </div>
-        <div class="row search-product">
-            <div class="col-xl-2 col-md-4 col-sm-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <div class="front">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="back">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="cart-info cart-wrap">
-                            <button data-toggle="modal" data-target="#addtocart" title="Add to cart"><i
-                                    class="ti-shopping-cart"></i></button> <a href="javascript:void(0)"
-                                title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search"
-                                    aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i
-                                    class="ti-reload" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                        <a href="product-page(no-sidebar).html">
-                            <h6>Slim Fit Cotton Shirt</h6>
-                        </a>
-                        <h4>$500.00</h4>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <div class="front">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="back">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="cart-info cart-wrap">
-                            <button data-toggle="modal" data-target="#addtocart" title="Add to cart"><i
-                                    class="ti-shopping-cart"></i></button> <a href="javascript:void(0)"
-                                title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search"
-                                    aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i
-                                    class="ti-reload" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                        <a href="product-page(no-sidebar).html">
-                            <h6>Slim Fit Cotton Shirt</h6>
-                        </a>
-                        <h4>$500.00</h4>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <div class="front">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="back">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="cart-info cart-wrap">
-                            <button data-toggle="modal" data-target="#addtocart" title="Add to cart"><i
-                                    class="ti-shopping-cart"></i></button> <a href="javascript:void(0)"
-                                title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search"
-                                    aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i
-                                    class="ti-reload" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                        <a href="product-page(no-sidebar).html">
-                            <h6>Slim Fit Cotton Shirt</h6>
-                        </a>
-                        <h4>$500.00</h4>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <div class="front">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="back">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="cart-info cart-wrap">
-                            <button data-toggle="modal" data-target="#addtocart" title="Add to cart"><i
-                                    class="ti-shopping-cart"></i></button> <a href="javascript:void(0)"
-                                title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search"
-                                    aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i
-                                    class="ti-reload" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                        <a href="product-page(no-sidebar).html">
-                            <h6>Slim Fit Cotton Shirt</h6>
-                        </a>
-                        <h4>$500.00</h4>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <div class="front">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="back">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="cart-info cart-wrap">
-                            <button data-toggle="modal" data-target="#addtocart" title="Add to cart"><i
-                                    class="ti-shopping-cart"></i></button> <a href="javascript:void(0)"
-                                title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search"
-                                    aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i
-                                    class="ti-reload" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                        <a href="product-page(no-sidebar).html">
-                            <h6>Slim Fit Cotton Shirt</h6>
-                        </a>
-                        <h4>$500.00</h4>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6">
-                <div class="product-box">
-                    <div class="img-wrapper">
-                        <div class="front">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="back">
-                            <a href="#"><img
-                                    src="https://images-na.ssl-images-amazon.com/images/I/61paqOv2LuL._AC_UX569_.jpg"
-                                    class="img-fluid blur-up lazyload bg-img" alt=""></a>
-                        </div>
-                        <div class="cart-info cart-wrap">
-                            <button data-toggle="modal" data-target="#addtocart" title="Add to cart"><i
-                                    class="ti-shopping-cart"></i></button> <a href="javascript:void(0)"
-                                title="Add to Wishlist"><i class="ti-heart" aria-hidden="true"></i></a> <a href="#"
-                                data-toggle="modal" data-target="#quick-view" title="Quick View"><i class="ti-search"
-                                    aria-hidden="true"></i></a> <a href="compare.html" title="Compare"><i
-                                    class="ti-reload" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-detail">
-                        <div class="rating"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                                class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></div>
-                        <a href="product-page(no-sidebar).html">
-                            <h6>Slim Fit Cotton Shirt</h6>
-                        </a>
-                        <h4>$500.00</h4>
-                        <ul class="color-variant">
-                            <li class="bg-light0"></li>
-                            <li class="bg-light1"></li>
-                            <li class="bg-light2"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- product section end -->
-
-<!-- <app-footer [topPipingColor]="topPipingColor" [bottomPipingColor]="bottomPipingColor"
-    [mainIcingColor]="mainIcingColor"></app-footer> -->
-
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header border-bottom">
-        <h3 class="offcanvas-title" id="offcanvasExampleLabel"><i class="bi bi-cart3"></i></h3>
+        <h3 class="offcanvas-title text-center w-100" id="offcanvasExampleLabel"><i style="    font-size: 34px;
+            font-weight: 900;
+            color: black;" class="bi bi-cart3"></i></h3>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -941,9 +639,9 @@
                             alt="Circle">
                     </td>
                     <td>
-                        <h3 class="mb-0">
-                            <a href="https://www.cherans.com/product/cherans-celebration-cake/">Celebration Cake</a>
-                        </h3>
+                        <h4 class="mb-0">
+                            <a class="maincolor text-decoration-none" href="https://www.cherans.com/product/cherans-celebration-cake/">Celebration Cake</a>
+                        </h4>
                         <div>
                             <p class="mb-0">Shape : {{item.shape}}</p>
                             <p *ngIf="item.flavour != ''" class="mb-0">Cake Flavour: {{item.flavour}}</p>
@@ -996,22 +694,41 @@
             </tbody>
         </table>
     </div>
-    <div class="offcanvas-footer border-top">
+    <div class="offcanvas-footer border-top p-2">
         <div class="container mt-3">
-            <div class="row">
-                <div class="col-lg-6 input-group-text p-2">
+            <div *ngIf="!isPromo" class="row">
+                <div class="col-lg-12">
+                    <a class="promocolor" (click)="isPromo = !isPromo">
+                        Have a promo code? Click here. </a>
+                </div>
+            </div>
+            <div *ngIf="isPromo" class="row">
+                <div class="col-lg-6">
                     <input type="text" class="input-text form-control input-lg" placeholder="Enter Promo Code "
                         value="">
-                    <input type="button" class="btn btn-secondary" value="Apply">
                 </div>
                 <div class="col-lg-6 align-self-center">
-                    <h3 class="float-end">Subtotal : {{totalPrice | currency:currency}}</h3>
+                    <input type="button" class="btn btn-secondary float-end" value="Apply">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="align-self-lg-center col-lg-6">
+                    <span style="    font-size: 16px;
+                   font-weight: 700;"> Subtotal</span>
+                </div>
+                <div class="align-self-lg-center col-lg-6">
+                    <p class="float-end mb-0" style="
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: black;
+                ">{{totalPrice | currency:currency}}</p>
                 </div>
             </div>
             <div class="mt-3 mb-3">
-                <a (click)="checkout()" class="btn btn-solid w-100">
+                <a (click)="checkout()" class="btn btn-lg proceed-btn  w-100">
                     Proceed to checkout </a>
-                <a class="btn btn-lg btn-secondary mt-3 w-100">
+                <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                    class="btn btn-lg btn-secondary mt-3 w-100">
                     Continue shopping </a>
             </div>
         </div>

@@ -1,19 +1,15 @@
 <!-- breadcrumb start -->
-<div class="breadcrumb-section bg-cheran p-2">
+<div *ngIf="!mobile" class="breadcrumb-section bg-cheran p-2">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 gift-msg">
-                GIFT MESSAGE OPTION – Available on all orders
+                ORDERS ARE DISPATCHED WITHIN 3 WORKING DAYS
             </div>
         </div>
     </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
-    <div class="container-fluid" style="padding: 0% 5% 0% 5%;">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -46,16 +42,20 @@
         </div>
     </div>
 </nav>
-<section class="hsection">
+<section class="hsection container">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 text-center">
+        <div class="col-md-4 col-sm-12"></div>
+        <div class="col-md-4 col-sm-12 text-center">
             <a class="maincolor" href="https://www.cherans.com/">
-                <img style="width: 40%;" src="https://www.cherans.com/wp-content/uploads/2022/04/logo.png"
+                <img style="width: 60%;" src="https://www.cherans.com/wp-content/uploads/2022/04/logo.png"
                     class="attachment-large size-large wp-image-44" alt=""> </a>
+            <button *ngIf="mobile" class="navbar-toggler float-end p-3" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMobileMenu">
+                <span class="fa fa-2x fa-align-justify maincolor"></span>
+            </button>
         </div>
-        <div class="col-4 text-center">
-            <ul>
+        <div class="col-md-4 col-sm-12 text-center">
+            <ul *ngIf="!mobile">
                 <li class="m-3">
                     <a class="maincolor" href="https://www.cherans.com/my-account/" target="_blank">
                         <i class="fa fa-user"></i> </a>
@@ -72,11 +72,7 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="m-auto">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                     <ul class="me-auto mb-2 mb-lg-0">
                         <li>
@@ -127,3 +123,55 @@
         </nav>
     </div>
 </section>
+
+
+<div class="offcanvas offcanvas-start" style="width: 90%;" tabindex="-1" id="offcanvasMobileMenu"
+    aria-labelledby="offcanvasMobileMenu">
+    <div class="offcanvas-header border-bottom">
+        <h3 class="offcanvas-title text-center w-50" id="offcanvasMobileMenu"></h3>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+        <ul class="">
+            <li class="w-100" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                <a href="https://www.cherans.com/product/best-sellers/" class="nav-link m-item">Best
+                    Sellers
+                </a>
+            </li>
+            <li class="w-100">
+                <a href="https://www.cherans.com/product/brownies/" class="nav-link m-item">Brownies
+                </a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item" href="https://www.cherans.com/product-category/cookies/">Cookies</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item" href="https://www.cherans.com/locations/">Cinnamon
+                    Buns</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item"
+                    href="https://www.cherans.com/product-category/celebration-cakes/">Celebration Cakes</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item"
+                    href="https://www.cherans.com/product-category/personalised-gifts/">Personalised
+                    Gifts</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item" href="https://www.cherans.com/product-category/christmas/">Christmas</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item"
+                    href="https://www.cherans.com/product-category/sprinkles/">Sprinkles</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item" href="https://www.cherans.com/product/gift-card/">Gift
+                    Cards</a>
+            </li>
+            <li class="w-100">
+                <a class="nav-link m-item" href="https://www.cherans.com/crowdfunding/">Crowdfunding</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -41,7 +41,15 @@ export class OrderSuccessComponent {
     })
   }
 
-  getDate(date:any){
-    return new Date(date* 1000).toUTCString() || null;
+  getDate(date: any) {
+    return new Date(date * 1000).toUTCString() || null;
+  }
+
+  getPickupDate(data: any) {
+    return data ? data.dropdown.options.filter((a: any) => a.value == data.dropdown.value)[0].label : "";
+  }
+
+  getPickupTime(data: any) {
+    return data ? data.dropdown.options.filter((a: any) => a.value == data.dropdown.value)[0].label : "";
   }
 }
