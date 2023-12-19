@@ -5,6 +5,8 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import { OrderFailedComponent } from './order-failed/order-failed.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { OrdersComponent } from './orders/orders.component';
 
 interface NgxSpinnerConfig {
   type?: string;
@@ -32,6 +35,7 @@ interface NgxSpinnerConfig {
     OrderFailedComponent,
     FooterComponent,
     HeaderComponent,
+    OrdersComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,9 @@ interface NgxSpinnerConfig {
     HttpClientModule,
     BrowserAnimationsModule,
     NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    TableModule,
+    ButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy },],

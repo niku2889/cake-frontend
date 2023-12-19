@@ -26,5 +26,7 @@ export class ApiService {
         });
     }
 
-
+    async getorders() {
+        return await this.apiActionService.getApi("getorders");
+    }
 }

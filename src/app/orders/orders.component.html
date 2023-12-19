@@ -1,0 +1,115 @@
+<app-header></app-header>
+<div class="container mt-5 mb-5">
+    <div class="card">
+        <p-table [value]="ordersData" responsiveLayout="stack" #dt1 dataKey="orderNo" [paginator]="true" [rows]="5"
+            [showCurrentPageReport]="true"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[5, 10, 20]" [loading]="loading"
+            [globalFilterFields]="['customer_details?.name', 'customer_details?.email', 'orderNo', 'customer_details?.phone']">
+            <!-- <ng-template pTemplate="caption">
+                <div class="flex">
+                    <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash"
+                        (click)="clear(dt1)"></button>
+                    <span class="p-input-icon-left ml-auto">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')"
+                            placeholder="Search keyword" />
+                    </span>
+                </div>
+            </ng-template> -->
+            <ng-template pTemplate="header">
+                <tr>
+                    <th style="width: 5rem"></th>
+                    <th>Order#</th>
+                    <th>Customer</th>
+                    <th>Billing Address</th>
+                    <th>Total Price</th>
+                    <th>Collection Date</th>
+                    <th>Collection Time</th>
+                    <th>Order Date</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-order let-expanded="expanded">
+                <tr>
+                    <td>
+                        <button type="button" pButton pRipple [pRowToggler]="order"
+                            class="p-button-text p-button-rounded p-button-plain"
+                            [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                    </td>
+                    <td>{{ order?.orderNo }}</td>
+                    <td>{{ order?.customer_details?.name }}<br>
+                        {{ order?.customer_details?.email }}<br>
+                        {{ order?.customer_details?.phone }}
+                    </td>
+                    <td>{{ order?.customer_details?.address?.line1 }}<br>
+                        {{ order?.customer_details?.address?.line2 }}<br>
+                        {{ order?.customer_details?.address?.city }},
+                        {{ order?.customer_details?.address?.state }},
+                        {{ order?.customer_details?.address?.country }},
+                        {{ order?.customer_details?.address?.postal_code }}</td>
+                    <td>{{ (order?.amount_total / 100) | currency:'GBP' }}</td>
+                    <td>{{getPickupDate(order?.custom_fields[0])}}</td>
+                    <td>{{getPickupTime(order?.custom_fields[1])}}</td>
+                    <td>{{getDate(order?.created) | date:'short'}}</td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-order>
+                <tr >
+                    <td colspan="8" class="bg-white">
+                        <div class="p-3">
+                            <p-table [value]="order.cheranOrdersData.items">
+                                <ng-template pTemplate="header">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity </th>
+                    <th>Shape </th>
+                    <th>Flavour/Fillings</th>
+                    <th>Sprinkler</th>
+                    <th>Colors</th>
+                    <th>Extras</th>
+                    <th>Gift Message</th>
+                    <th>Baker Note</th>
+                    <th>Price</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td>{{ product?.name }}</td>
+                    <td>{{ product?.quantity }}</td>
+                    <td>{{ product?.shape }}</td>
+                    <td>
+                        <span>Flavour: {{product?.flavour}}</span><br>
+                        <span>Outside Finish: {{product?.outsideFinish}}</span>
+                    </td>
+                    <td>{{ product?.sprinkler }}</td>
+                    <td>
+                        <span>Main Icing Color: {{product?.selectedMainIcingColor}}</span><br>
+                        <span>Top Color: {{product?.selectedTopPipingColor}}</span><br>
+                        <span>Bottom Color: {{product?.selectedBottomPipingColor}}</span>
+                    </td>
+                    <td>
+                        <span>Tall Candles: {{product?.noExtraTallCandle}}</span><br>
+                        <span>Chocolate Macarons: {{product?.noChocolateMacarons}}</span><br>
+                        <span>Wafer Butterflies: {{product?.noWaferButterflies}}</span>
+                    </td>
+                    <td>{{ product?.giftMessage }}</td>
+                    <td>{{ product?.bakerNote }}</td>
+                    <td>{{ product?.finalPrice | currency: 'GBP' }}</td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage">
+                <tr>
+                    <td colspan="8">There are no order for this product yet.</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    </td>
+    </tr>
+    </ng-template>
+    </p-table>
+</div>
+
+</div>
+<app-footer></app-footer>
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>

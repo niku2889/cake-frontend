@@ -1,0 +1,21 @@
+::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #dee2e6;
+    border-width: 1px 0 2px 0;
+    font-weight: 500;
+    color: #212529;
+    font-size: 12px;
+    background: #e6d2d2;
+    transition: box-shadow 0.15s;
+}
+
+::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+    text-align: left;
+    border: 1px solid #dee2e6;
+    border-width: 1px 0 0 0;
+    padding: 5px;
+    font-size: 12px;
+    background: lightgrey;
+    border-bottom: 1px solid white!important;
+}
