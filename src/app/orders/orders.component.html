@@ -1,6 +1,9 @@
 <app-header></app-header>
 <div class="container mt-5 mb-5">
     <div class="card">
+        <div class="m-2 ">
+            <button type="button" (click)="signout()" class="btn btn-sm btn-solid float-end ">Logout</button>
+        </div>
         <p-table [value]="ordersData" responsiveLayout="stack" #dt1 dataKey="orderNo" [paginator]="true" [rows]="5"
             [showCurrentPageReport]="true"
             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
@@ -54,7 +57,7 @@
                 </tr>
             </ng-template>
             <ng-template pTemplate="rowexpansion" let-order>
-                <tr >
+                <tr>
                     <td colspan="8" class="bg-white">
                         <div class="p-3">
                             <p-table [value]="order.cheranOrdersData.items">

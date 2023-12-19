@@ -54,4 +54,9 @@ export class OrdersComponent {
     table.clear();
   }
 
+  signout() {
+    this.apiService.signout().then(res => {
+    })
+  }
+
 }

@@ -20,11 +20,26 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { OrdersComponent } from './orders/orders.component';
+import { LoginComponent } from './login/login.component';
+import { initializeApp } from 'firebase/app';
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAehxPHDbNScSrsbLoh98gWmiYlDXebgmQ",
+  authDomain: "boxing-frontend.firebaseapp.com",
+  databaseURL: "https://boxing-frontend.firebaseio.com",
+  projectId: "boxing-frontend",
+  storageBucket: "boxing-frontend.appspot.com",
+  messagingSenderId: "439486935948",
+  appId: "1:439486935948:web:e7f82e8c29c0b370d1dca9",
+  measurementId: "G-HG2Z0G7CTT"
+};
 
 interface NgxSpinnerConfig {
   type?: string;
 }
-
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +51,7 @@ interface NgxSpinnerConfig {
     FooterComponent,
     HeaderComponent,
     OrdersComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
