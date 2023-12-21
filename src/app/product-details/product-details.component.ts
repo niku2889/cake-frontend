@@ -99,6 +99,17 @@ export class ProductDetailsComponent {
     divData: string = '';
     divData1: string = '';
     isPromo: boolean = false;
+    shapeSelected: any;
+
+    step1: boolean = true;
+    step2: boolean = false;
+    step3: boolean = false;
+    step4: boolean = false;
+    step5: boolean = false;
+    step6: boolean = false;
+    step7: boolean = false;
+    step8: boolean = false;
+    finish:boolean = true;
 
     createHeartSvg = (color = '#c8a7a3', defaultColor = '#c8a7a3') => `
     <svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 1500 1500" height="500" version="1.0">
@@ -7111,7 +7122,7 @@ export class ProductDetailsComponent {
         }
         this.mainIcingColor = e.hexcode;
         this.selectedMainIcingColor = e.name;
-        this.scrollTop();
+        //this.scrollTop();
     }
 
     changeTopColor(e: any) {
@@ -7131,7 +7142,7 @@ export class ProductDetailsComponent {
         }
         this.topPipingColor = e.hexcode;
         this.selectedTopPipingColor = e.name;
-        this.scrollTop();
+        //this.scrollTop();
     }
 
     changeBottomColor(e: any) {
@@ -7152,7 +7163,7 @@ export class ProductDetailsComponent {
         }
         this.bottomPipingColor = e.hexcode;
         this.selectedBottomPipingColor = e.name;
-        this.scrollTop();
+        //this.scrollTop();
     }
 
     scrollTop() {
@@ -7164,6 +7175,7 @@ export class ProductDetailsComponent {
     }
 
     selectShape(type: string) {
+        this.shapeSelected = type;
         this.isHeartShape = type == 'heart' ? true : false;
         this.topPipingColor = '';
         this.mainIcingColor = '';
@@ -7343,5 +7355,105 @@ export class ProductDetailsComponent {
 
     deleteItem(i: number) {
         this.cartItems.splice(i, 1);
+    }
+
+    nextStep1() {
+        this.step1 = true;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = false;
+        this.finish = true;
+        this.shapeSelected = "";
+        this.selectedFlavour = "";
+        this.selectedInsideFilling = "";
+        this.showOutsideFinish = true;
+        this.selectedOutsideFinish = "";
+        this.selectedMainIcingColor = "";
+        this.selectedTopPipingColor = "";
+        this.selectedBottomPipingColor = "";
+        this.selectedSprinkler = "";
+    }
+
+
+    nextStep2() {
+        this.step1 = false;
+        this.step2 = true;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = false;
+    }
+
+    nextStep3() {
+        this.step1 = false;
+        this.step2 = false;
+        this.step3 = true;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = false;
+    }
+
+    nextStep4() {
+        this.step1 = false;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = true;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = false;
+    }
+
+    nextStep5() {
+        this.step1 = false;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = true;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = false;
+        this.finish = this.showOutsideFinish;
+    }
+
+    nextStep6() {
+        this.step1 = false;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = true;
+        this.step7 = false;
+        this.step8 = false;
+    }
+
+    nextStep7() {
+        this.step1 = false;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = true;
+        this.step8 = false;
+    }
+
+    nextStep8() {
+        this.step1 = false;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = true;
     }
 }
