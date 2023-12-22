@@ -112,6 +112,14 @@ export class ProductDetailsComponent {
     finish:boolean = true;
 
     shapemodel:any;
+    favourmodel:any;
+    insidefillingmodel:any;
+    outsidefinishmodel:any;
+    maincolormodel:any;
+    topcolormodel:any;
+    bottomcolormodel:any;
+    sprinklermodel:any;
+
 
     createHeartSvg = (color = '#c8a7a3', defaultColor = '#c8a7a3') => `
     <svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 1500 1500" height="500" version="1.0">
@@ -7209,6 +7217,7 @@ export class ProductDetailsComponent {
 
     selectSprinkler(type: string) {
         this.selectedSprinkler = type;
+        this.addToCart()
     }
 
     changeCustomText(event: any) {
@@ -7369,6 +7378,18 @@ export class ProductDetailsComponent {
         this.step7 = false;
         this.step8 = false;
         this.finish = true;
+    }
+
+    reset(){
+        this.step1 = true;
+        this.step2 = false;
+        this.step3 = false;
+        this.step4 = false;
+        this.step5 = false;
+        this.step6 = false;
+        this.step7 = false;
+        this.step8 = false;
+        this.finish = true;
         this.shapeSelected = "";
         this.selectedFlavour = "";
         this.selectedInsideFilling = "";
@@ -7379,7 +7400,6 @@ export class ProductDetailsComponent {
         this.selectedBottomPipingColor = "";
         this.selectedSprinkler = "";
     }
-
 
     nextStep2() {
         this.step1 = false;

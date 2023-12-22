@@ -509,7 +509,8 @@
                             <div>
                                 <ul class="shapetype">
                                     <li><a (click)="selectShape('heart')">
-                                            <input [(ngModel)]="shapemodel" value="heart" type="radio" name="emotion" id="heart" class="input-hidden" />
+                                            <input [(ngModel)]="shapemodel" value="heart" type="radio" name="emotion"
+                                                id="heart" class="input-hidden" />
                                             <label for="heart">
                                                 <img placement="top" ngbTooltip="Heart" class="shape" width="80"
                                                     height="80" src="../../assets/images/1.png"
@@ -518,7 +519,8 @@
                                         </a>
                                     </li>
                                     <li><a (click)="selectShape('round')">
-                                            <input [(ngModel)]="shapemodel" value="round" type="radio" name="emotion" id="round" class="input-hidden" />
+                                            <input [(ngModel)]="shapemodel" value="round" type="radio" name="emotion"
+                                                id="round" class="input-hidden" />
                                             <label for="round">
                                                 <img placement="top" ngbTooltip="Round" class="shape" width="80"
                                                     height="80" src="../../assets/images/3.png"
@@ -534,7 +536,8 @@
                             <div>
                                 <ul class="flavourtype">
                                     <li><a (click)="selectFlavour('Vanilla-Sponge')">
-                                            <input type="radio" name="flavour" id="flavour1" class="input-hidden" />
+                                            <input [(ngModel)]="favourmodel" value="Vanilla-Sponge" type="radio"
+                                                name="flavour" id="flavour1" class="input-hidden" />
                                             <label for="flavour1">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Vanilla-Sponge"
@@ -543,7 +546,8 @@
                                         </a>
                                     </li>
                                     <li><a (click)="selectFlavour('Funfetti-Sponge')">
-                                            <input type="radio" name="flavour" id="flavour2" class="input-hidden" />
+                                            <input [(ngModel)]="favourmodel" value="Funfetti-Sponge" type="radio"
+                                                name="flavour" id="flavour2" class="input-hidden" />
                                             <label for="flavour2">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Funfetti-Sponge"
@@ -551,7 +555,8 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectFlavour('Chocolate')">
-                                            <input type="radio" name="flavour" id="flavour3" class="input-hidden" />
+                                            <input [(ngModel)]="favourmodel" value="Chocolate" type="radio"
+                                                name="flavour" id="flavour3" class="input-hidden" />
                                             <label for="flavour3">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Chocolate" src="../../assets/images/chocolate.png"
@@ -559,7 +564,8 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectFlavour('Red-Velvet')">
-                                            <input type="radio" name="flavour" id="flavour4" class="input-hidden" />
+                                            <input [(ngModel)]="favourmodel" value="Red-Velvet" type="radio"
+                                                name="flavour" id="flavour4" class="input-hidden" />
                                             <label for="flavour4">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Red-Velvet" src="../../assets/images/red-velvet.png"
@@ -574,8 +580,8 @@
                             <div>
                                 <ul class="flavourtype">
                                     <li><a (click)="selectInsideFilling('Chocolate Fudge Ganache')">
-                                            <input type="radio" name="insideFilling" id="filling1"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel" value="Chocolate Fudge Ganache"
+                                                type="radio" name="insideFilling" id="filling1" class="input-hidden" />
                                             <label for="filling1">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Chocolate Fudge Ganache"
@@ -585,8 +591,9 @@
                                     </li>
                                     <li><a
                                             (click)="selectInsideFilling('Chocolate Fudge Ganache & Vanilla Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling2"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Chocolate Fudge Ganache & Vanilla Buttercream" type="radio"
+                                                name="insideFilling" id="filling2" class="input-hidden" />
                                             <label for="filling2">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Chocolate Fudge Ganache & Vanilla Buttercream"
@@ -595,8 +602,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Cream Cheese & Vanilla Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling3"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Cream Cheese & Vanilla Buttercream" type="radio"
+                                                name="insideFilling" id="filling3" class="input-hidden" />
                                             <label for="filling3">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Cream Cheese & Vanilla Buttercream"
@@ -605,8 +613,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Lemon Curd & Vanilla Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling4"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Lemon Curd & Vanilla Buttercream" type="radio"
+                                                name="insideFilling" id="filling4" class="input-hidden" />
                                             <label for="filling4">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Lemon Curd & Vanilla Buttercream"
@@ -615,8 +624,8 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Lotus Biscoff')">
-                                            <input type="radio" name="insideFilling" id="filling5"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel" value="Lotus Biscoff" type="radio"
+                                                name="insideFilling" id="filling5" class="input-hidden" />
                                             <label for="filling5">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Lotus Biscoff"
@@ -624,8 +633,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Milk-Chocolate & Vanilla Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling6"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Milk-Chocolate & Vanilla Buttercream" type="radio"
+                                                name="insideFilling" id="filling6" class="input-hidden" />
                                             <label for="filling6">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Milk-Chocolate & Vanilla Buttercream"
@@ -634,8 +644,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Nutella & Vanilla  Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling7"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Nutella & Vanilla  Buttercream" type="radio" name="insideFilling"
+                                                id="filling7" class="input-hidden" />
                                             <label for="filling7">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Nutella & Vanilla  Buttercream"
@@ -644,8 +655,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Raspberry Jam & Vanilla  Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling8"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Raspberry Jam & Vanilla  Buttercream" type="radio"
+                                                name="insideFilling" id="filling8" class="input-hidden" />
                                             <label for="filling8">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Raspberry Jam & Vanilla  Buttercream"
@@ -654,8 +666,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Strawberry-Jam & Vanilla  Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling9"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="Strawberry-Jam & Vanilla  Buttercream" type="radio"
+                                                name="insideFilling" id="filling9" class="input-hidden" />
                                             <label for="filling9">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Strawberry-Jam & Vanilla  Buttercream"
@@ -664,8 +677,8 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('Vanilla-Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling10"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel" value="Vanilla-Buttercream"
+                                                type="radio" name="insideFilling" id="filling10" class="input-hidden" />
                                             <label for="filling10">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Vanilla-Buttercream"
@@ -674,8 +687,9 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectInsideFilling('White Chocolate & Vanilla Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling11"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="White Chocolate & Vanilla Buttercream" type="radio"
+                                                name="insideFilling" id="filling11" class="input-hidden" />
                                             <label for="filling11">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="White Chocolate & Vanilla Buttercream"
@@ -685,8 +699,9 @@
                                     </li>
                                     <li><a
                                             (click)="selectInsideFilling('White Chocolate Hazelnut & Vanilla Buttercream')">
-                                            <input type="radio" name="insideFilling" id="filling12"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="insidefillingmodel"
+                                                value="White Chocolate Hazelnut & Vanilla Buttercream" type="radio"
+                                                name="insideFilling" id="filling12" class="input-hidden" />
                                             <label for="filling12">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="White Chocolate Hazelnut & Vanilla Buttercream"
@@ -702,8 +717,8 @@
                             <div>
                                 <ul class=" flavourtype">
                                     <li><a (click)="selectOutsideFinish('Chocolate Fudge Ganache')">
-                                            <input type="radio" name="outsideFinish" id="finish1"
-                                                class="input-hidden" />
+                                            <input type="radio" name="outsideFinish" id="finish1" class="input-hidden"
+                                                [(ngModel)]="outsidefinishmodel" value="Chocolate Fudge Ganache" />
                                             <label for="finish1">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Chocolate Fudge Ganache"
@@ -712,16 +727,16 @@
                                             </label></a>
                                     </li>
                                     <li><a (click)="selectOutsideFinish('Cream Cheese')">
-                                            <input type="radio" name="outsideFinish" id="finish2"
-                                                class="input-hidden" />
+                                            <input type="radio" name="outsideFinish" id="finish2" class="input-hidden "
+                                                [(ngModel)]="outsidefinishmodel" value="Cream Cheese" />
                                             <label for="finish2">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Cream Cheese" src="../../assets/images/cream-cheese.png"
                                                     alt="Cream Cheese"></label></a>
                                     </li>
                                     <li class="active"><a (click)="selectOutsideFinish('Vanilla Buttercream')">
-                                            <input type="radio" name="outsideFinish" id="finish3"
-                                                class="input-hidden" />
+                                            <input type="radio" name="outsideFinish" id="finish3" class="input-hidden"
+                                                [(ngModel)]="outsidefinishmodel" value="Vanilla Buttercream" />
                                             <label for="finish3">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Vanilla Buttercream"
@@ -738,8 +753,8 @@
                                     class="label">
                                     <div class="color-container">
                                         <span class="color">
-                                            <input type="radio" name="icingColor" [id]="'mic' +i"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="maincolormodel" value="{{item.name}}" type="radio"
+                                                name="icingColor" [id]="'mic' +i" class="input-hidden" />
                                             <label [for]="'mic' +i">
                                                 <img class="imgcls" width="40" height="40" placement="top"
                                                     ngbTooltip="{{item.name}}"
@@ -758,8 +773,8 @@
                                     class="label">
                                     <div class="color-container">
                                         <span class="color">
-                                            <input type="radio" name="topPipingColor" [id]="'tpc' + i"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="topcolormodel" value="{{item.name}}" type="radio"
+                                                name="topPipingColor" [id]="'tpc' + i" class="input-hidden" />
                                             <label [for]="'tpc' +i">
                                                 <img class="imgcls" width="40" height="40" placement="top"
                                                     ngbTooltip="{{item.name}}"
@@ -778,8 +793,8 @@
                                     class="label">
                                     <div class="color-container">
                                         <span class="color">
-                                            <input type="radio" name="bottomPipingColor" [id]="'bpc' +i"
-                                                class="input-hidden" />
+                                            <input [(ngModel)]="bottomcolormodel" value="{{item.name}}" type="radio"
+                                                name="bottomPipingColor" [id]="'bpc' +i" class="input-hidden" />
                                             <label [for]="'bpc' +i">
                                                 <img class="imgcls" width="40" height="40" placement="top"
                                                     ngbTooltip="{{item.name}}"
@@ -796,7 +811,8 @@
                             <div>
                                 <ul class="flavourtype">
                                     <li><a (click)="selectSprinkler('100’s & 1000’s Pastel')">
-                                            <input type="radio" name="spinkler" id="spinkler1" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="100’s & 1000’s Pastel"
+                                                type="radio" name="spinkler" id="spinkler1" class="input-hidden" />
                                             <label for="spinkler1">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="100’s & 1000’s Pastel"
@@ -804,7 +820,8 @@
                                                     alt="100’s & 1000’s Pastel"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Blue Metallic Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler2" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Blue Metallic Mix" type="radio"
+                                                name="spinkler" id="spinkler2" class="input-hidden" />
                                             <label for="spinkler2">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Blue Metallic Mix"
@@ -812,7 +829,9 @@
                                                     alt="Blue Metallic Mix"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Cheran’s Bakery Funfetti Sprinkles')">
-                                            <input type="radio" name="spinkler" id="spinkler3" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel"
+                                                value="Cheran’s Bakery Funfetti Sprinkles" type="radio" name="spinkler"
+                                                id="spinkler3" class="input-hidden" />
                                             <label for="spinkler3">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Cheran’s Bakery Funfetti Sprinkles"
@@ -820,7 +839,9 @@
                                                     alt="Cheran’s Bakery Funfetti Sprinkles"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Custom – Cheran’s Bakery to choose')">
-                                            <input type="radio" name="spinkler" id="spinkler4" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel"
+                                                value="Custom – Cheran’s Bakery to choose" type="radio" name="spinkler"
+                                                id="spinkler4" class="input-hidden" />
                                             <label for="spinkler4">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Custom – Cheran’s Bakery to choose"
@@ -828,7 +849,8 @@
                                                     alt="Custom – Cheran’s Bakery to choose"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Gold Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler5" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Gold Mix" type="radio"
+                                                name="spinkler" id="spinkler5" class="input-hidden" />
                                             <label for="spinkler5">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Gold Mix"
@@ -836,7 +858,8 @@
                                                     alt="Gold Mix"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Pink Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler6" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Pink Mix" type="radio"
+                                                name="spinkler" id="spinkler6" class="input-hidden" />
                                             <label for="spinkler6">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Pink Mix"
@@ -844,7 +867,8 @@
                                                     alt="Pink Mix"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Purple Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler7" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Purple Mix" type="radio"
+                                                name="spinkler" id="spinkler7" class="input-hidden" />
                                             <label for="spinkler7">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Purple Mix"
@@ -852,7 +876,8 @@
                                                     alt="Purple Mix"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Rainbow Stars')">
-                                            <input type="radio" name="spinkler" id="spinkler8" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Rainbow Stars" type="radio"
+                                                name="spinkler" id="spinkler8" class="input-hidden" />
                                             <label for="spinkler8">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Rainbow Stars"
@@ -860,7 +885,8 @@
                                                     alt="Rainbow Stars"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Silver Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler9" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Silver Mix" type="radio"
+                                                name="spinkler" id="spinkler9" class="input-hidden" />
                                             <label for="spinkler9">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Silver Mix"
@@ -868,7 +894,8 @@
                                                     alt="Silver Mix"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('Unicorn Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler10" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="Unicorn Mix" type="radio"
+                                                name="spinkler" id="spinkler10" class="input-hidden" />
                                             <label for="spinkler10">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="Unicorn Mix"
@@ -876,7 +903,8 @@
                                                     alt="Unicorn Mix"></label></a>
                                     </li>
                                     <li><a (click)="selectSprinkler('White Mix')">
-                                            <input type="radio" name="spinkler" id="spinkler11" class="input-hidden" />
+                                            <input [(ngModel)]="sprinklermodel" value="White Mix" type="radio"
+                                                name="spinkler" id="spinkler11" class="input-hidden" />
                                             <label for="spinkler11">
                                                 <img class="shape" width="60" height="60" placement="top"
                                                     ngbTooltip="White Mix"
@@ -888,7 +916,7 @@
                         </div>
                         <div *ngIf="step1" class="row">
                             <div class="col-12">
-                                <button [ngClass]="{'disabled' : !shapeSelected}" (click)="nextStep2()"
+                                <button (click)="nextStep2()"
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Next
                                     : Choose
                                     flavour</button>
@@ -900,67 +928,65 @@
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
-                                <button (click)="nextStep3()" [ngClass]="{'disabled' : !selectedFlavour}"
-                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next Step:
+                                <button (click)="nextStep3()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next:
                                     Choose Inside
                                     Filling</button>
                             </div>
                         </div>
                         <div *ngIf="showOutsideFinish && step3" class="row">
                             <div class="col-3">
-                                <button (click)="nextStep3()"
+                                <button (click)="nextStep2()"
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
-                                <button (click)="nextStep4()" [ngClass]="{'disabled' : !selectedInsideFilling}"
-                                    class="btn btn-block btn-solid text-capitalise w-100">Next
-                                    Step: Choose Outside
+                                <button (click)="nextStep4()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next: Choose Outside
                                     Finish</button>
                             </div>
                         </div>
                         <div *ngIf="(!showOutsideFinish || step4) && finish" class="row">
                             <div class="col-3">
-                                <button (click)="nextStep4()"
+                                <button (click)="nextStep3()"
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
                                 <button (click)="nextStep5()"
-                                    [ngClass]="{'disabled' : !selectedOutsideFinish && showOutsideFinish}"
-                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Main Icing
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next: Choose Main Icing
                                     Colour</button>
                             </div>
                         </div>
                         <div *ngIf="step5" class="row">
                             <div class="col-3">
-                                <button (click)="nextStep5()"
+                                <button (click)="nextStep4()"
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
-                                <button (click)="nextStep6()" [ngClass]="{'disabled' : !selectedMainIcingColor}"
-                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Top Piping
+                                <button (click)="nextStep6()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next: Choose Top Piping
                                     Colour</button>
                             </div>
                         </div>
                         <div *ngIf="step6" class="row">
                             <div class="col-3">
-                                <button (click)="nextStep6()"
+                                <button (click)="nextStep5()"
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
-                                <button (click)="nextStep7()" [ngClass]="{'disabled' : !selectedTopPipingColor}"
-                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Bottom
+                                <button (click)="nextStep7()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next: Choose Bottom
                                     Piping
                                     Colour</button>
                             </div>
                         </div>
                         <div *ngIf="step7" class="row">
                             <div class="col-3">
-                                <button (click)="nextStep7()"
+                                <button (click)="nextStep6()"
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
-                                <button (click)="nextStep8()" [ngClass]="{'disabled' : !selectedBottomPipingColor}"
-                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Your
+                                <button (click)="nextStep8()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next: Choose Your
                                     sprinkler</button>
                             </div>
                         </div>
@@ -970,9 +996,9 @@
                                     class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
                             </div>
                             <div class="col-9">
-                                <button *ngIf="step8" (click)="nextStep1()"
-                                    [ngClass]="{'disabled' : !selectedSprinkler}"
-                                    class="btn btn-block btn-solid text-capitalise w-100">Reset</button>
+                                <button *ngIf="step8" (click)="addToCart()" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasExample"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Add To Cart</button>
                             </div>
                         </div>
                         <div class="product-description mt-3">

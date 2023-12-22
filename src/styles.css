@@ -10594,10 +10594,11 @@ input[type="number"] {
 input[type=radio]:checked+label>img {
     border: 1px solid rgb(130, 93, 102);
     border-radius: 10px;
+    padding: 5px;
 }
 
 input[type=radio]:checked+label {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
