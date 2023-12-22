@@ -509,7 +509,7 @@
                             <div>
                                 <ul class="shapetype">
                                     <li><a (click)="selectShape('heart')">
-                                            <input type="radio" name="emotion" id="heart" class="input-hidden" />
+                                            <input [(ngModel)]="shapemodel" value="heart" type="radio" name="emotion" id="heart" class="input-hidden" />
                                             <label for="heart">
                                                 <img placement="top" ngbTooltip="Heart" class="shape" width="80"
                                                     height="80" src="../../assets/images/1.png"
@@ -518,7 +518,7 @@
                                         </a>
                                     </li>
                                     <li><a (click)="selectShape('round')">
-                                            <input type="radio" name="emotion" id="round" class="input-hidden" />
+                                            <input [(ngModel)]="shapemodel" value="round" type="radio" name="emotion" id="round" class="input-hidden" />
                                             <label for="round">
                                                 <img placement="top" ngbTooltip="Round" class="shape" width="80"
                                                     height="80" src="../../assets/images/3.png"
@@ -886,42 +886,95 @@
                                 </ul>
                             </div>
                         </div>
-                        <div>
-                            <button [ngClass]="{'disabled' : !shapeSelected}" *ngIf="step1" (click)="nextStep2()"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next
-                                Step: Choose
-                                flavour</button>
-                            <button *ngIf="step2" (click)="nextStep3()" [ngClass]="{'disabled' : !selectedFlavour}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next Step:
-                                Choose Inside
-                                Filling</button>
-                            <button *ngIf="showOutsideFinish && step3" (click)="nextStep4()"
-                                [ngClass]="{'disabled' : !selectedInsideFilling}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next
-                                Step: Choose Outside
-                                Finish</button>
-                            <button *ngIf="(!showOutsideFinish || step4) && finish" (click)="nextStep5()"
-                                [ngClass]="{'disabled' : !selectedOutsideFinish && showOutsideFinish}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Main Icing
-                                Colour</button>
-                            <button *ngIf="step5" (click)="nextStep6()"
-                                [ngClass]="{'disabled' : !selectedMainIcingColor}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Top Piping
-                                Colour</button>
-                            <button *ngIf="step6" (click)="nextStep7()"
-                                [ngClass]="{'disabled' : !selectedTopPipingColor}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Bottom
-                                Piping
-                                Colour</button>
-                            <button *ngIf="step7" (click)="nextStep8()"
-                                [ngClass]="{'disabled' : !selectedBottomPipingColor}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Your
-                                sprinkler</button>
-                            <button *ngIf="step8" (click)="nextStep1()"
-                                [ngClass]="{'disabled' : !selectedSprinkler}"
-                                class="btn btn-block btn-solid text-capitalise w-100">Change your selection</button>
+                        <div *ngIf="step1" class="row">
+                            <div class="col-12">
+                                <button [ngClass]="{'disabled' : !shapeSelected}" (click)="nextStep2()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next
+                                    : Choose
+                                    flavour</button>
+                            </div>
                         </div>
-
+                        <div *ngIf="step2" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep1()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button (click)="nextStep3()" [ngClass]="{'disabled' : !selectedFlavour}"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Next Step:
+                                    Choose Inside
+                                    Filling</button>
+                            </div>
+                        </div>
+                        <div *ngIf="showOutsideFinish && step3" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep3()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button (click)="nextStep4()" [ngClass]="{'disabled' : !selectedInsideFilling}"
+                                    class="btn btn-block btn-solid text-capitalise w-100">Next
+                                    Step: Choose Outside
+                                    Finish</button>
+                            </div>
+                        </div>
+                        <div *ngIf="(!showOutsideFinish || step4) && finish" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep4()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button (click)="nextStep5()"
+                                    [ngClass]="{'disabled' : !selectedOutsideFinish && showOutsideFinish}"
+                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Main Icing
+                                    Colour</button>
+                            </div>
+                        </div>
+                        <div *ngIf="step5" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep5()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button (click)="nextStep6()" [ngClass]="{'disabled' : !selectedMainIcingColor}"
+                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Top Piping
+                                    Colour</button>
+                            </div>
+                        </div>
+                        <div *ngIf="step6" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep6()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button (click)="nextStep7()" [ngClass]="{'disabled' : !selectedTopPipingColor}"
+                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Bottom
+                                    Piping
+                                    Colour</button>
+                            </div>
+                        </div>
+                        <div *ngIf="step7" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep7()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button (click)="nextStep8()" [ngClass]="{'disabled' : !selectedBottomPipingColor}"
+                                    class="btn btn-block btn-solid text-capitalise w-100">Next Step: Choose Your
+                                    sprinkler</button>
+                            </div>
+                        </div>
+                        <div *ngIf="step8" class="row">
+                            <div class="col-3">
+                                <button (click)="nextStep7()"
+                                    class="btn btn-block btn-solid text-capitalise w-100 f-10">Back</button>
+                            </div>
+                            <div class="col-9">
+                                <button *ngIf="step8" (click)="nextStep1()"
+                                    [ngClass]="{'disabled' : !selectedSprinkler}"
+                                    class="btn btn-block btn-solid text-capitalise w-100">Reset</button>
+                            </div>
+                        </div>
                         <div class="product-description mt-3">
                             <div class="row mt-3">
                                 <div class="col-lg-6 col-md-6 col-sm-6">

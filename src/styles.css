@@ -10593,6 +10593,7 @@ input[type="number"] {
 
 input[type=radio]:checked+label>img {
     border: 1px solid rgb(130, 93, 102);
+    border-radius: 10px;
 }
 
 input[type=radio]:checked+label {
@@ -10746,4 +10747,8 @@ svg#one {
 .form-control:focus {
     border: 1px solid #999999;
     border-radius: 5px;
+}
+
+.f-10{
+    font-size: 10px;
 }

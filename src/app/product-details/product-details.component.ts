@@ -111,6 +111,8 @@ export class ProductDetailsComponent {
     step8: boolean = false;
     finish:boolean = true;
 
+    shapemodel:any;
+
     createHeartSvg = (color = '#c8a7a3', defaultColor = '#c8a7a3') => `
     <svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 1500 1500" height="500" version="1.0">
     <defs>
