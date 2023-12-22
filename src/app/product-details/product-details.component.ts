@@ -122,7 +122,7 @@ export class ProductDetailsComponent {
 
 
     createHeartSvg = (color = '#c8a7a3', defaultColor = '#c8a7a3') => `
-    <svg xmlns="http://www.w3.org/2000/svg" width="500" viewBox="0 0 1500 1500" height="500" version="1.0">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" viewBox="0 0 1500 1500" height="300" version="1.0">
     <defs>
         <clipPath id="dN">
             <path d="M0 0h44v19H0z" />
@@ -3576,7 +3576,7 @@ export class ProductDetailsComponent {
 </svg>`.split(defaultColor).join(color);
 
     createRoundSvg = (color = '#c8a7a3', defaultColor = '#c8a7a3') => `
-    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" version="1.0" viewBox="0 0 1500 1500">
+    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" version="1.0" viewBox="0 0 1500 1500">
     <defs>
         <clipPath id="dW">
             <path d="M.04 0h47.519v30H.039Zm0 0" />
@@ -7217,7 +7217,6 @@ export class ProductDetailsComponent {
 
     selectSprinkler(type: string) {
         this.selectedSprinkler = type;
-        this.addToCart()
     }
 
     changeCustomText(event: any) {

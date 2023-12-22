@@ -1,0 +1,6 @@
+@media only screen and (min-width : 320px) and (max-width: 640px) {
+    .product-right-slick img {
+        width:365px !important;
+        height: 150px;
+    }
+}
