@@ -25,14 +25,14 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAehxPHDbNScSrsbLoh98gWmiYlDXebgmQ",
-  authDomain: "boxing-frontend.firebaseapp.com",
-  databaseURL: "https://boxing-frontend.firebaseio.com",
-  projectId: "boxing-frontend",
-  storageBucket: "boxing-frontend.appspot.com",
-  messagingSenderId: "439486935948",
-  appId: "1:439486935948:web:e7f82e8c29c0b370d1dca9",
-  measurementId: "G-HG2Z0G7CTT"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 interface NgxSpinnerConfig {
